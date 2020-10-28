@@ -131,7 +131,7 @@ class TelegramBot():
 				parse_mode=ParseMode.HTML,
 				reply_markup=self.choices_keyboard_remove)
 
-			router = zte_.zte_(self.router_ip_address, self.router_user, self.router_password)
+			router = zte_.RouterZteF609(self.router_ip_address, self.router_user, self.router_password)
 
 			if router.reboot() == 'SUCCESS':
 				logger.info("Rebooting Router ZTE F609 Completed Successfully, Waiting 120 Seconds")
